@@ -1,58 +1,30 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
-import { links, social } from './Data';
-import Logo from '../../NavBar/Images/Logo.png';
-import '../Css/NavBar.css';
+import React from 'react'
 
-const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = '0px';
-    }
-  }, [showLinks]);
+import "../Css/NavBar.css"
+import LogoApp from './LogoApp'
+import SearchInput from './SearchInput'
+import RightButton from './RightButton'
+import ButtonGroup from './ButtonGroup'
+
+function NavBar() {
   return (
-    <nav  >
-      <div className='nav-center '>
-        <div className='nav-header'>
-          <img src={Logo} className='logo' alt='logo' />
-          <button className='nav-toggle' onClick={toggleLinks}>
-            <FaBars />
-          </button>
+    <div className='col-lg-12 NavBar'>
+      <div className='row'>
+        <div className='col-lg-2 LogoApp'>
+          <LogoApp />
         </div>
-        <div className='links-container ' ref={linksContainerRef}>
-          <ul className='links' ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
+        <div className='col-lg-7'>
+          <SearchInput />
         </div>
-        <ul className='social-icons '>
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <div className='col-lg-3 RightButton'>
+          <RightButton />
+        </div>
+        <div className='col-lg-12 ButtonGroup'>
+          <ButtonGroup />
+        </div>
       </div>
-    </nav>
-  );
-};
+    </div>
+  )
+}
 
-export default Navbar;
+export default NavBar
