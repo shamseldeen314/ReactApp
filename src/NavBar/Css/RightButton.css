@@ -1,0 +1,70 @@
+.RightButton {
+    text-align: right;
+}
+
+.User_Icon {
+    width: 100px;
+    border-radius: 100%;
+}
+
+.btnIcon {
+    border: none;
+    margin-right: 4px;
+    border-radius: 0px;
+    padding: 3px 15px;
+    position: relative;
+    font-size: 38px;
+    color: #0666C4;
+}
+
+
+.btnIcon:hover {
+
+    color: blue;
+}
+
+
+.groupIcon {
+    position: relative;
+}
+
+.image {
+    display: inline-block;
+    margin-left: 15px;
+    width: 56px;
+    /* top: 27px; */
+    position: relative;
+    top: 14px;
+}
+
+.LiChild1 {
+    position: absolute;
+    top: -31px;
+    right: -43px;
+    font-size: 52px;
+    color: red;
+}
+
+.btnIcon:hover .LiChild1 {
+
+    transition: .5s;
+    transform: rotate(360deg);
+}
+
+.LiChild2 {
+    position: absolute;
+    top: 17px;
+    right: -5px;
+    color: yellow;
+    font-size: 8px;
+    font-size: 13px;
+}
+
+.NotiicationNumber {
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    top: 31px;
+    left: 4px;
+    font-weight: bolder;
+}
