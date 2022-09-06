@@ -15,8 +15,8 @@ function ChildCard() {
                 <ChildList children={children} />
             </div>
             <div className='group_btn_card'>
-                <button className='clear_btn' onClick={() => setChildren([])}>clear children</button>
-                <button className='refresh_btn' onClick={() => setChildren(Data2)}>children</button>
+                <button className='clear_btn c_Btn' onClick={() => setChildren([])}>clear children</button>
+                <button className='refresh_btn r_Btn' onClick={() => setChildren(Data2)}>children</button>
             </div>
         </section>
     )
